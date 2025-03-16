@@ -1,66 +1,54 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-y:hidde;
-    
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+* a{
+    color: white;
+    text-decoration: none;
 }
 
 body{
     background-color: black;
 }
 
-.mainNetflixContainer{
-    /* border: 2px solid red; */
-     padding: 0rem 2rem;
-   
-  
-
-}
-
 .backgroundContainer{
     background-image: url("./bannerImage.jpg");
     filter: blur(16px);
     height: 100vh;
-    width:100%;
     position: relative;
-    overflow:hidden; 
-    z-index:2;
 }
 
 .pinkOverlay{
     background-color: rgba(104, 3, 20, 0.404);
     height: 100%;
     width: 100%;
-    border:2px solid blue;
-    position: absolute;
-    z-index:2;
-    overflow:hidden;
 }
 
 .contentContainer{
     position: absolute;
     top: 0;
-    left:0;
     background-color: rgba(0, 0, 0, .5);
     padding: 0rem 2rem;
-    z-index:3;
-    width:100%;
-    max-height:100%;
-    box-sizing:border-box;
-    /* border: 2px solid green; */
-    
 }
 
 nav{
     /* border: 2px solid green; */
     height: 20vh;
+    position: fixed;
+    z-index: 10000;
 }
 
 .upperNavbarSection{
     /* border: 2px solid blue; */
     display: flex;
-    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
 }
 
 .upperNavbarLeftSection{
@@ -76,6 +64,9 @@ nav{
 .upperNavbarRightSection{
     /* border: 2px solid green; */
     width: 50%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .navBarButtonContainer{
@@ -84,6 +75,7 @@ nav{
     align-items: center;
     /* border: 2px solid green; */
     height: 100%;
+    width:100%;
 }
 
 .languageButton{
@@ -95,6 +87,8 @@ nav{
     outline: none;
     color: white;
     font-size: 1rem;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -128,8 +122,9 @@ nav{
     display: flex;
     justify-content: space-evenly;
     border-radius: 50px;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.7);
     box-shadow: 2px 3px 14px rgba(0, 0, 0, .5);
+    backdrop-filter: blur(7px);
     height: 7vh;
 }
 
@@ -140,16 +135,17 @@ nav{
     align-items: center;
 }
 
+.sectionsContainer{
+    margin-top: 20vh;
+}
+
 .bannerSection{
     /* border: 2px solid red; */
     height: 90vh;
     background-image: url("./bannerImage.jpg");
-    background-position: center;
     background-size: 100% 100%;
     border-radius: 20px;
     position: relative;
-   
-    
 }
 
 .overlay{
@@ -157,7 +153,6 @@ nav{
     width: 100%;
     background-image: linear-gradient( rgba(0,0,0,.3),rgba(0,0,0,.7), black );
     border-radius: 20px;
-    
 
 }
 
@@ -172,7 +167,6 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items:center ;
-
 }
 
 .bannerContainer h2{
@@ -222,4 +216,190 @@ nav{
     color: #fff;
     font-size: 1.2rem;
     font-weight: 900;
+}
+
+.carouselSection, 
+.planSection,
+.reasonToJoinSection,
+.faqSection,
+.getStartedSection{
+    /* border: 2px solid red; */
+    color: white;
+    
+}
+
+.carouselSection h2,
+.planSection h2,
+.reasonToJoinSection h2,
+.faqSection h2{
+    /* border: 2px solid red; */
+    margin-left: 5rem;
+    font-size: 2.5rem;
+}
+
+.carouselCardConatiner,
+.plansConatiner,
+.reasonsConatiner,
+.faqCardsContainer{
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+
+
+.carouselCard{
+    width: 12%;
+    /* border: 2px solid yellow; */
+    height: 38vh;
+    border-radius: 20px;
+    position: relative;
+}
+
+.carouselNumberContainer{
+    position: absolute;
+    left: -20px;
+}
+
+.carouselNumberContainer span{
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+}
+
+.carouselImageContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselImageContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.planCard, .reasonCard{
+    /* border: 2px solid green; */
+    height: 38vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem 1rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.372);
+
+}
+
+.planCard1{
+    background: linear-gradient(149deg, #1C4072 6.96%, #172B47 40.17%, #120c1f 73.39%);
+}
+
+.planCard2{
+    background: linear-gradient(149deg, #1D529D 6.96%, #233371 40.17%, #120c1f 73.39%);
+}
+
+.planCard3{
+    background: linear-gradient(149deg, #792A95 6.96%, #38216C 40.17%, #120c1f 73.39%);
+}
+
+.planCard4{
+    background: linear-gradient(149deg, #922556 6.96%, #391945 40.17%, #120c1f 73.39%);
+}
+
+.planCard h2{
+    margin-left: 0;
+    font-size: 1.5rem;
+}
+
+.planCard h4{
+    font-size: 1.3rem;
+}
+
+.planCard p{
+    font-size: 1rem;
+}
+
+.reasonCard{
+    background: rgb(47, 47, 47);
+    border: none;
+    height: 33vh;
+}
+
+.reasonCard h2{
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.reasonCard p{
+    font-size: 0.9rem;
+}
+
+.reasonCardLowerContent{
+    display: flex;
+    justify-content: end;
+}
+
+.reasonCardLowerContent svg{
+    height: 50px;
+    width: 50px;
+}
+
+.faqCard{
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.faqQuestion,
+.faqAnswer{
+    padding: 2rem;
+    border-radius: 10px;
+    /* border: 1px solid white; */
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+}
+
+.faqQuestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqQuestion span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.faqAnswer {
+    display: none;
+
+}
+
+.faqCard:hover{
+    cursor: pointer;
+}
+
+/* Jab faqQuestion p hover ho toh faqAnswer dikh jaye */
+.faqCard:hover .faqAnswer {
+    display: block;
+    cursor: pointer;
+}
+
+.faqCardsContainer{
+    flex-direction: column;
+}
+
+.getStartedSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.getStartedSection p{
+    margin-bottom: 1rem
 }
