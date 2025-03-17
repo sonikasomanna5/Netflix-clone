@@ -45,10 +45,7 @@ nav{
 .upperNavbarSection{
     /* border: 2px solid blue; */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    
+    height: 50%;
 }
 
 .upperNavbarLeftSection{
@@ -64,9 +61,6 @@ nav{
 .upperNavbarRightSection{
     /* border: 2px solid green; */
     width: 50%;
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 .navBarButtonContainer{
@@ -75,7 +69,6 @@ nav{
     align-items: center;
     /* border: 2px solid green; */
     height: 100%;
-    width:100%;
 }
 
 .languageButton{
@@ -86,9 +79,7 @@ nav{
     border: 1px solid white;
     outline: none;
     color: white;
-    font-size: 1rem;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.5rem;
 
 }
 
@@ -99,7 +90,7 @@ nav{
     outline: none;
     border: none;
     margin-left: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
 
 }
 
@@ -109,7 +100,7 @@ nav{
 
 .lowerNavbarSection{
     /* border: 2px solid red; */
-    height: 50%;
+    height: 60%;
     color: white;
     display: flex;
     justify-content: center;
@@ -133,6 +124,7 @@ nav{
     height: 100%;
     display: flex;
     align-items: center;
+    font-size:1.5em;
 }
 
 .sectionsContainer{
@@ -225,6 +217,7 @@ nav{
 .getStartedSection{
     /* border: 2px solid red; */
     color: white;
+    font-size:2em;
     
 }
 
@@ -237,9 +230,9 @@ nav{
     font-size: 2.5rem;
 }
 
-.carouselCardConatiner,
-.plansConatiner,
-.reasonsConatiner,
+.carouselCardContainer,
+.plansContainer,
+.reasonsContainer,
 .faqCardsContainer{
     /* border: 2px solid green; */
     height: 100%;
@@ -248,6 +241,7 @@ nav{
     justify-content: space-evenly;
     margin: 2rem auto;
 }
+
 
 
 .carouselCard{
@@ -312,15 +306,15 @@ nav{
 
 .planCard h2{
     margin-left: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .planCard h4{
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 .planCard p{
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .reasonCard{
@@ -330,13 +324,13 @@ nav{
 }
 
 .reasonCard h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-left: 0;
     margin-bottom: 10px;
 }
 
 .reasonCard p{
-    font-size: 0.9rem;
+    font-size: 1.5rem;
 }
 
 .reasonCardLowerContent{
@@ -356,7 +350,7 @@ nav{
 
 .faqQuestion,
 .faqAnswer{
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     /* border: 1px solid white; */
     margin-bottom: 20px;
@@ -367,13 +361,15 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size:1.5rem;
 }
 
 .faqQuestion span{
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 500;
 }
 .faqAnswer {
+    font-size:1.5rem;
     display: none;
 
 }
@@ -402,4 +398,14 @@ nav{
 
 .getStartedSection p{
     margin-bottom: 1rem
+}
+.footer{
+    font-size:2rem;
+    position:relative;
+    z-index:10;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:1rem 2rem;
 }
